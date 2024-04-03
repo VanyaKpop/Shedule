@@ -1,0 +1,1 @@
+<appwidget-provider android:minWidth="288dip" android:minHeight="72dp" android:resizeMode="horizontal | vertical" android:minResizeWidth="144dip" android:updatePeriodMillis="30000" android:initialLayout="@layout/widget" android:previewImage="@drawable/xamarin" xmlns:android="http://schemas.android.com/apk/res/android" />
