@@ -12,12 +12,7 @@ namespace lesson
     {
         string dayOfWeek = DateTime.Now.DayOfWeek.ToString().ToLower();
         int week = (int)ISOWeek.GetWeekOfYear(DateTime.Now) - 1;
-        bool? isEven(int week)
-        {
-            bool result = (week % 2) == 0;
-            // Console.WriteLine(result);
-            return result;
-        }
+
         public string jsonLoad()
         {
             string hell = "";
@@ -32,7 +27,7 @@ namespace lesson
 
                 var result =
                     from i in item
-                    where i.weekStart <= week & week <= i.weekEnd & i.idWeek == dayOfWeek & (i.even == null | i.even == isEven(week))
+                    where i.weekStart <= week & week <= i.weekEnd & i.idWeek == dayOfWeek & (i.even == null | i.even == (week % 2 == 0))
 
                     orderby i.numeration
                     select i;
@@ -60,7 +55,7 @@ namespace lesson
 
                 var result =
                     from i in item
-                    where i.weekStart <= week & week <= i.weekEnd & i.idWeek == weekNow & (i.even == null | i.even == isEven(week))
+                    where i.weekStart <= week & week <= i.weekEnd & i.idWeek == weekNow & (i.even == null | i.even == (week % 2 == 0))
 
                     orderby i.numeration
                     select i;

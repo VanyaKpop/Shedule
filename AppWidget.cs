@@ -52,7 +52,7 @@ namespace Hiii_uwu
 
             // Register click event for the Background
             var piBackground = PendingIntent.GetBroadcast(context, 0, intent, PendingIntentFlags.UpdateCurrent);
-            widgetView.SetOnClickPendingIntent(Resource.Id.widgetBackground, piBackground);
+            widgetView.SetOnClickPendingIntent(Resource.Id.widgetBackground, GetPendingSelfIntent(context, AnnouncementClick));
         }
         private PendingIntent GetPendingSelfIntent(Context context, string action)
         {
