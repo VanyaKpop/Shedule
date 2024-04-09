@@ -7,7 +7,7 @@ using Android.Widget;
 using System.Globalization;
 using lesson;
 using System;
-
+	
 
 namespace Hiii_uwu
 {
@@ -51,8 +51,7 @@ namespace Hiii_uwu
             intent.PutExtra(AppWidgetManager.ExtraAppwidgetIds, appWidgetIds);
 
             // Register click event for the Background
-            var piBackground = PendingIntent.GetBroadcast(context, 0, intent, PendingIntentFlags.UpdateCurrent);
-            widgetView.SetOnClickPendingIntent(Resource.Id.widgetBackground, GetPendingSelfIntent(context, AnnouncementClick));
+			widgetView.SetOnClickPendingIntent(Resource.Id.widgetBackground, GetPendingSelfIntent(context, AnnouncementClick));
         }
         private PendingIntent GetPendingSelfIntent(Context context, string action)
         {
