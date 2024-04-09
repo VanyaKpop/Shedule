@@ -9,7 +9,7 @@ using lesson;
 using System;
 	
 
-namespace Hiii_uwu
+namespace Klytavoska
 {
 	[BroadcastReceiver(Label = "scheduleApp")]
 	[IntentFilter(new string[] { "android.appwidget.action.APPWIDGET_UPDATE" })]
