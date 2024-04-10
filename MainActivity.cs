@@ -32,6 +32,8 @@ namespace Hiii_uwu
  
             SetContentView(Resource.Layout.activity_main);
 
+            setText();
+
             Button WeekNow = (Button)FindViewById(Resource.Id.Main_WeekNowButton);
             WeekNow.Click += (sender, e) =>
             {
@@ -44,11 +46,8 @@ namespace Hiii_uwu
                NextWeekButton();
             };
 
-            setText();
-
         }
-
-        void setText()
+		void setText()
 		{
             Lessons lessons = new Lessons();
 
@@ -69,8 +68,6 @@ namespace Hiii_uwu
             fridayText.Text = lessons.jsonLoad("friday", week);
             saturdayText.Text = lessons.jsonLoad("saturday", week);
         }
-
-       
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

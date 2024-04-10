@@ -74,7 +74,7 @@
 		},
 
 		{
-			"idWeek": "Tuesday",
+			"idWeek": "tuesday",
 			"weekStart": 3,
 			"weekEnd": 19,
 			"numeration": 2,
