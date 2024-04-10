@@ -5,6 +5,6 @@
     android:minHeight="72dp"
     android:resizeMode="horizontal | vertical"
     android:minResizeWidth="144dip"
-	android:updatePeriodMillis="1800000"
+	android:updatePeriodMillis="30000"
     android:initialLayout="@layout/Widget"
     android:previewImage="@drawable/xamarin" />
