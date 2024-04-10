@@ -61,11 +61,11 @@ namespace Hiii_uwu
             TextView fridayText = (TextView)FindViewById(Resource.Id.MainTextFriday);
             TextView saturdayText = (TextView)FindViewById(Resource.Id.MainTextSaturday);
 
-            mondayText.Text = lessons.jsonLoad("mnday", week);
-            tuesdayText.Text = lessons.jsonLoad("tusday", week);
-            wednesdayText.Text = lessons.jsonLoad("wnesday", week);
+            mondayText.Text = lessons.jsonLoad("monday", week);
+            tuesdayText.Text = lessons.jsonLoad("tuesday", week);
+            wednesdayText.Text = lessons.jsonLoad("wednesday", week);
             thursdayText.Text = lessons.jsonLoad("thursday", week);
-            fridayText.Text = lessons.jsonLoad("friay", week);
+            fridayText.Text = lessons.jsonLoad("friday", week);
             saturdayText.Text = lessons.jsonLoad("saturday", week);
         }
 

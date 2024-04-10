@@ -6,7 +6,7 @@
 			"weekStart": 1,
 			"weekEnd": 30,
 			"numeration": 1,
-			"even": Null,
+			"even": null,
 			"lesson": "Разговоры  важном. 309 ауд"
 		},
 
@@ -15,7 +15,7 @@
 			"weekStart": 2,
 			"weekEnd": 5,
 			"numeration": 2,
-			"even": Null,
+			"even": null,
 			"lesson": "Технология разработки П.О (лек). 308 ауд"
 		},
 
@@ -24,7 +24,7 @@
 			"weekStart": 6,
 			"weekEnd": 20,
 			"numeration": 2,
-			"even": Null,
+			"even": null,
 			"lesson": "Физ-ра 103 ауд"
 		},
 

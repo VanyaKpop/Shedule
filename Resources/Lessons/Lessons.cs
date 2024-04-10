@@ -11,7 +11,7 @@ namespace lesson
     class Lessons
     {
         string dayOfWeek = DateTime.Now.DayOfWeek.ToString().ToLower();
-        int week = (int)ISOWeek.GetWeekOfYear(DateTime.Now);
+        int week = (int)ISOWeek.GetWeekOfYear(DateTime.Now) - 1;
 
         public string jsonLoad()
         {
@@ -27,7 +27,7 @@ namespace lesson
 
                 var result =
                     from i in item
-                    where (i.weekStart <= week & week <= i.weekEnd & i.idWeek == dayOfWeek)
+                    where (i.weekStart <= week & week <= i.weekEnd & i.idWeek == dayOfWeek) & (i.even == null | i.even == (week % 2 == 0))
 
                     orderby i.numeration
                     select i;
