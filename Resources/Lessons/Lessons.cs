@@ -27,7 +27,7 @@ namespace lesson
 
                 var result =
                     from i in item
-                    where (i.weekStart <= week & week <= i.weekEnd & i.idWeek == dayOfWeek)
+                    where (i.weekStart <= week & week <= i.weekEnd & i.idWeek == dayOfWeek) & (i.even == null | i.even == (week % 2 == 0))
 
                     orderby i.numeration
                     select i;
