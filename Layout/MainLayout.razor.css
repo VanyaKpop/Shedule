@@ -1,0 +1,25 @@
+﻿.header {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+}
+
+    .header > a {
+        display: block;
+        text-decoration: none;
+        height: 30px;
+        padding: 10px;
+        padding-top: 0;
+        color: #5E6472;
+    }
+
+    .header > p {
+        padding-top: 10px;
+        width: 130px;
+        color: black;
+    }
+
+    .header > a:hover, .header > a:active {
+        color: #34373E;
+    }
