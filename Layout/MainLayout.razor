@@ -2,15 +2,31 @@
 @inject IGetterService Getter
 
 <div class="header">
-	<a href="/"> <p align="center">Home</p> </a>
-
-	<EditForm Model="@shiit" OnSubmit="Submit" >
+		<EditForm Model="@shiit" OnSubmit="Submit">
+				<p>
+					Это поле ввода:<InputNumber class="Input remove-border" @bind-Value="shiit.Week"/>
+				</p>
+			<input type="submit" hidden />
+		</EditForm>
+	
 		<p>
-			<InputNumber class="Input remove-border" @bind-Value="shiit.Week" />
+			Выбрана неделя @week
 		</p>
-		<input type="submit" hidden />
-	</EditForm>
+
 </div>
+
+<div class="main row" style="white-space: pre-line">
+	<div class="container">
+		<p class="pd-1 bord">Выбрана неделя @week</p>
+		<EditForm Model="@shiit" OnSubmit="Submit" class="test">
+			<p class="pd-3">
+				Это поле ввода:<InputNumber class="Input remove-border" @bind-Value="shiit.Week" />
+			</p>
+			<input type="submit" hidden />
+		</EditForm>
+	</div>
+</div>
+
 
 @Body
 
@@ -18,6 +34,11 @@
 	Shiiiit shiit = new();
 
 	EditContext? editContext;
+
+	private Timer? timer;
+	private DateTime Time = DateTime.Now;
+
+	private int week { get; set; } 
 
 	void Submit()
 	{
@@ -28,6 +49,13 @@
 	{
 		await base.OnInitializedAsync();
 
+		timer = new Timer(Bruh, new System.Threading.AutoResetEvent(false), 1000, 1000);
+	}
+
+	async void Bruh(object stateInfo)
+	{
+		week = Getter.GetWeek();
+		await InvokeAsync(StateHasChanged);
 	}
 
 	public class Shiiiit
@@ -48,7 +76,16 @@
 		outline: none;
 		border-inline: none;
 		background-color: transparent;
-		border-radius: 0.5rem;
-		border: 2px solid rgb(0, 0, 0);
+		border-bottom: 0.2rem solid rgb(0, 0, 0);
+		border-top: none;
+	}
+
+	input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
 	}
 </style>

@@ -1,25 +1,99 @@
-﻿.header {
-    margin: 0;
-    padding: 10px;
-    display: flex;
-    align-items: end;
+﻿
+.edit-p {
+    margin-left: 1rem;
+    border-bottom: 0.2rem solid rgb(0, 0, 0);
 }
 
-    .header > a {
-        display: block;
-        text-decoration: none;
-        height: 30px;
-        padding: 10px;
-        padding-top: 0;
-        color: #5E6472;
-    }
+.main {
+    display: none;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.pd-1 {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+    font-weight: 550;
+}
+
+.pd-3 {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.bord {
+    border-bottom: 0.2rem solid rgb(0, 0, 0);
+    background-color: #b6c2e8;
+    -moz-border-radius-topright: 0.4rem;
+    -moz-border-radius-topleft: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+.header {
+    margin: 0;
+    display: flex;
+    align-items: end;
+    background-color: #b6c2e8;
+    border-bottom: 0.2rem solid rgb(0, 0, 0);
+}
 
     .header > p {
-        padding-top: 10px;
-        width: 130px;
-        color: black;
+        margin-left: 0.5rem;
     }
 
     .header > a:hover, .header > a:active {
         color: #34373E;
     }
+
+@media screen and (max-width: 400px) {
+
+    .header {
+        display: none;
+    }
+
+    .main {
+        display: flex;
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 0.2rem;
+        width: 19rem;
+        height: 5rem;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        border: 0.2rem solid rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .main {
+        display: flex;
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 0.2rem;
+        width: 17rem;
+        height: 5rem;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        border: 0.2rem solid rgb(0, 0, 0);
+    }
+}

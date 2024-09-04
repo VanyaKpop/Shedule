@@ -10,7 +10,7 @@ namespace Shedule.Interface
 	{
 		Task<string> GetLesson( string DayOfTheWeek);
 
-		int GetWeek(int week);
+		int GetWeek();
 		void SetWeek(int week);
 	}
 
@@ -25,7 +25,7 @@ namespace Shedule.Interface
 			Week = week;
 		}
 
-		public int GetWeek(int week)
+		public int GetWeek()
 		{
 			return Week;
 		}
