@@ -150,3 +150,23 @@
         border: 0.2rem solid rgb(0, 0, 0);
     }
 }
+
+@media screen and (max-width: 350px) {
+
+    .main {
+        display: flex;
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 0.2rem;
+        width: 16rem;
+        height: 10rem;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        border: 0.2rem solid rgb(0, 0, 0);
+    }
+}

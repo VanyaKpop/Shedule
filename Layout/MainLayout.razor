@@ -2,10 +2,12 @@
 @inject IGetterService Getter
 
 <div class="header">
-		<EditForm Model="@shiit" OnSubmit="Submit">
-				<p>
-					Это поле ввода:<InputNumber class="Input remove-border" @bind-Value="shiit.Week"/>
-				</p>
+		<EditForm Model="@this" OnSubmit="Submit">
+		@*<DataAnnotationsValidator />
+		<ValidationSummary />*@
+			<p>
+				<InputNumber class="Input remove-border" @bind-Value="Week" placeholder = "Введи номер недели"/>
+			</p>
 			<input type="submit" hidden />
 		</EditForm>
 	
@@ -18,9 +20,9 @@
 <div class="main row" style="white-space: pre-line">
 	<div class="container">
 		<p class="pd-1 bord">Выбрана неделя @week</p>
-		<EditForm Model="@shiit" OnSubmit="Submit" class="test">
+		<EditForm Model="@this" OnSubmit="Submit" class="test">
 			<p class="pd-3">
-				Это поле ввода:<InputNumber class="Input remove-border" @bind-Value="shiit.Week" />
+				<InputNumber class="Input remove-border" @bind-Value="Week" placeholder = "Введи номер недели"/>
 			</p>
 			<input type="submit" hidden />
 		</EditForm>
@@ -31,18 +33,19 @@
 @Body
 
 @code {
-	Shiiiit shiit = new();
+
+	public int? Week { get; set; }
 
 	EditContext? editContext;
 
 	private Timer? timer;
 	private DateTime Time = DateTime.Now;
 
-	private int week { get; set; } 
+	private int? week { get; set; } 
 
 	void Submit()
 	{
-		Getter.SetWeek(shiit.Week);
+		Getter.SetWeek(Week);
 	}
 
 	protected override async Task OnInitializedAsync()
@@ -58,10 +61,6 @@
 		await InvokeAsync(StateHasChanged);
 	}
 
-	public class Shiiiit
-	{
-		public int Week { get; set; }
-	}
 }
 
 @*
@@ -78,6 +77,11 @@
 		background-color: transparent;
 		border-bottom: 0.2rem solid rgb(0, 0, 0);
 		border-top: none;
+	}
+
+	.Input::placeholder {
+		color: #212529;
+		opacity: 0.4;
 	}
 
 	input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {

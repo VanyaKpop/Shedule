@@ -10,23 +10,28 @@ namespace Shedule.Interface
 	{
 		Task<string> GetLesson( string DayOfTheWeek);
 
-		int GetWeek();
-		void SetWeek(int week);
+		int? GetWeek();
+		void SetWeek(int? week);
 	}
 
 	public class GetterService : IGetterService
 	{
 		private HttpClient httpClient = new HttpClient();
 
-		private int Week { get; set; }
+		private int? Week { get; set; }
 
-		public void SetWeek(int week)
+		public void SetWeek(int? week)
 		{
+			if (week == null)
+				throw new ArgumentNullException(nameof(week));
+
 			Week = week;
 		}
 
-		public int GetWeek()
+		public int? GetWeek()
 		{
+			if (!Week.HasValue)
+				return 1;
 			return Week;
 		}
 		public async Task<string> GetLesson(string DayOfTheWeek)
