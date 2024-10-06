@@ -43,14 +43,12 @@
 	private string? Friday { get; set; }
 	private string? Saturday { get; set; }
 
-	private static DateTime Date = new(2024, 1, 1, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
-
-	private int week = GetIso8601WeekOfYear(Date);
+	private static int UnixNow = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+	private int week = (int)Math.Round((UnixNow - 1725235200d) / (3600 * 24 * 7));
 
 	private HttpClient httpClient = new HttpClient();
 
 	private Timer? timer;
-	private DateTime Time = DateTime.Now;
 
 	protected override async Task OnInitializedAsync()
 	{
@@ -61,24 +59,8 @@
 		timer = new Timer(Bruh, new System.Threading.AutoResetEvent(false), 1000, 1000);
 	}
 
-	public static int GetIso8601WeekOfYear(DateTime time)
-	{
-		// Seriously cheat.  If its Monday, Tuesday or Wednesday, then it'll
-		// be the same week# as whatever Thursday, Friday or Saturday are,
-		// and we always get those right
-		DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(time);
-		if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
-		{
-			time = time.AddDays(3);
-		}
-
-		// Return the week of our adjusted day
-		return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(time, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-	}
-
 	async void Bruh(object stateInfo)
 	{
-		Time = DateTime.Now;
 
 		Monday = await Getter.GetLesson("monday");
 		Tuesday = await Getter.GetLesson("tuesday");
