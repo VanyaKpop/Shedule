@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|solutionrelative:interface\\igetter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|c:\\app\\vs programm\\maui\\shedule\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|solutionrelative:layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|c:\\app\\vs programm\\maui\\shedule\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|c:\\app\\vs programm\\maui\\shedule\\pages\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|solutionrelative:pages\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|c:\\app\\vs programm\\maui\\shedule\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|c:\\app\\vs programm\\maui\\shedule\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|c:\\app\\vs programm\\maui\\shedule\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4FB82845-E207-4682-B842-79457CC08E5F}|Shedule.csproj|solutionrelative:layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,27 +40,27 @@
               "RelativeDocumentMoniker": "Interface\\IGetter.cs",
               "ToolTip": "C:\\App\\VS Programm\\Maui\\Shedule\\Interface\\IGetter.cs",
               "RelativeToolTip": "Interface\\IGetter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAA4wCIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-06T14:49:02.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\App\\VS Programm\\Maui\\Shedule\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
               "ToolTip": "C:\\App\\VS Programm\\Maui\\Shedule\\Layout\\MainLayout.razor",
               "RelativeToolTip": "Layout\\MainLayout.razor",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAFAAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAC0AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-04T14:07:27.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MainLayout.razor.css",
               "DocumentMoniker": "C:\\App\\VS Programm\\Maui\\Shedule\\Layout\\MainLayout.razor.css",
               "RelativeDocumentMoniker": "Layout\\MainLayout.razor.css",
@@ -68,8 +68,7 @@
               "RelativeToolTip": "Layout\\MainLayout.razor.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAF0AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-04T13:53:08.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T13:53:08.942Z"
             },
             {
               "$type": "Document",
@@ -86,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\App\\VS Programm\\Maui\\Shedule\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Pages\\Home.razor",
               "ToolTip": "C:\\App\\VS Programm\\Maui\\Shedule\\Pages\\Home.razor",
               "RelativeToolTip": "Pages\\Home.razor",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADIAAAAWAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-30T09:00:47.969Z",
               "EditorCaption": ""

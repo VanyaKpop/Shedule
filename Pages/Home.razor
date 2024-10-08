@@ -44,7 +44,7 @@
 	private string? Saturday { get; set; }
 
 	private static int UnixNow = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
-	private int week = (int)Math.Round((UnixNow - 1725235200d) / (3600 * 24 * 7));
+	private static int week = (int)((UnixNow - 1725235200) / (60d * 60 * 24 * 7)) + 1;
 
 	private HttpClient httpClient = new HttpClient();
 
@@ -56,19 +56,20 @@
 
 		Getter.SetWeek(week);
 
-		timer = new Timer(Bruh, new System.Threading.AutoResetEvent(false), 1000, 1000);
+		timer = new Timer(shit, new System.Threading.AutoResetEvent(false), 10, 10);
 	}
 
-	async void Bruh(object stateInfo)
+	async void shit(object stateInfo) // заглушка
 	{
 
-		Monday = await Getter.GetLesson("monday");
-		Tuesday = await Getter.GetLesson("tuesday");
-		Wednesday = await Getter.GetLesson("wednesday");
-		Thursday = await Getter.GetLesson("thursday");
-		Friday = await Getter.GetLesson("friday");
-		Saturday = await Getter.GetLesson("saturday");
+		Monday = Getter.Monday;
+		Tuesday = Getter.Tuesday;
+		Wednesday = Getter.Wednesday;
+		Thursday = Getter.Thursday;
+		Friday = Getter.Friday;
+		Saturday = Getter.Saturday;
 
 		await InvokeAsync(StateHasChanged);
 	}
+
 }

@@ -12,14 +12,14 @@
 		</EditForm>
 	
 		<p>
-			Выбрана неделя @week
+			Выбрана неделя @Week
 		</p>
 
 </div>
 
 <div class="main row" style="white-space: pre-line">
 	<div class="container">
-		<p class="pd-1 bord">Выбрана неделя @week</p>
+		<p class="pd-1 bord">Выбрана неделя @Week</p>
 		<EditForm Model="@this" OnSubmit="Submit" class="test">
 			<p class="pd-3">
 				<InputNumber class="Input remove-border" @bind-Value="Week" placeholder = "Введи номер недели"/>
@@ -41,8 +41,6 @@
 	private Timer? timer;
 	private DateTime Time = DateTime.Now;
 
-	private int? week { get; set; } 
-
 	void Submit()
 	{
 		Getter.SetWeek(Week);
@@ -57,7 +55,8 @@
 
 	async void Bruh(object stateInfo)
 	{
-		week = Getter.GetWeek();
+		Week = Getter.GetWeek();
+
 		await InvokeAsync(StateHasChanged);
 	}
 
